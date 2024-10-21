@@ -1,0 +1,14 @@
+spring.application.name=StatistikaKrypto
+
+spring.datasource.url=jdbc:h2:file:./h2-db/crypto
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.h2.console.enabled=true
+spring.sql.init.encoding=UTF-8
+
+spring.jpa.hibernate.ddl-auto=update
+
+app.coingecko.api-url=https://api.coingecko.com/api/v3/simple/price?vs_currencies=eur&precision=full&include_last_updated_at=true&ids=
+app.coingecko.api-key=<API-KEY>
