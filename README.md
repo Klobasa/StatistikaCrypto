@@ -1,4 +1,5 @@
-##Sledování kryptoměn
+**Sledování kryptoměn**
+
 Vyrobte aplikaci postavenou na technologii SpringBoot v3. Výsledek by měl být spustitelný
 .jar file případně docker image a kód na GitLabu. Všechny použité knihovny by měly být
 ideálně nejnovější verze.
@@ -9,18 +10,21 @@ ideálně nejnovější verze.
 - Vystavené endpointy jsou zabezpečeny Basic auth.
 
 > [!NOTE]
->###ID měny
+>**ID měny**
+> 
 >ID (kód) měny je použit podle použitého API CoinGecko, u běžných kryptoměn jde většinou o jejich název (bitcoin, litecoin, dogecoin).
 Celý seznam lze najít [zde](https://docs.google.com/spreadsheets/d/1wTTuxXt8n9q7C4NDXqQpI3wpKu1_5bGVmP9Xz0XGSyU/edit?gid=0#gid=0).
 
 
 
-###Vrácení seznamu všech sledovaných kryptoměn
+**Vrácení seznamu všech sledovaných kryptoměn**
+
 `GET` /cron
 
 `GET` http://localhost:8080/cron
 
-###Zapnutí sledování pro zadanou měnu
+**Zapnutí sledování pro zadanou měnu**
+
 `POST` /cron/new
 >Params
 > >__currency__ ID měny
@@ -29,14 +33,15 @@ Celý seznam lze najít [zde](https://docs.google.com/spreadsheets/d/1wTTuxXt8n9
 
 `POST` http://localhost:8080/cron/new?currency=bitcoin&interval=300
 
-###Vypnutí sledování měny
+**Vypnutí sledování měny**
+
 `POST` /cron/remove
 >Params
 > >__currency__ ID měny
 
 `POST` http://localhost:8080/cron/remove?currency=bitcoin
 
-###Vrácení statistik cen pro zadané období
+**Vrácení statistik cen pro zadané období**
 `GET` /statistics/get
 >Params
 > >__currency__ ID měny
